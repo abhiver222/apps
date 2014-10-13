@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/acl2">
+
+    <TextView
+        android:id="@+id/regdescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/regdescr"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/spcldescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/regdescription"
+        android:layout_below="@+id/specialbutton"
+        android:layout_marginTop="15dp"
+        android:text="@string/spcldescr"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/specialdrinkview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/regulardrinkview"
+        android:layout_below="@+id/regdescription"
+        android:layout_marginTop="31dp"
+        android:text="@string/spclinit"
+        android:textColor="#000000"
+        android:textSize="30px" />
+
+    <Button
+        android:id="@+id/specialbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/regularbutton"
+        android:layout_below="@+id/specialdrinkview"
+        android:layout_marginTop="17dp"
+        android:text="@string/special" 
+        android:textColor="#000000"
+        android:background="#39BDBF"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/drinktype"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ff0000" />
+
+    <Button
+        android:id="@+id/regularbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/regdescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:text="@string/regular"
+        android:textColor="#000000"
+        android:background="#39BDBF" />
+
+    <TextView
+        android:id="@+id/regulardrinkview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/regularbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:text="@string/reginit"
+        android:textColor="#000000" 
+        android:textSize="30px"/>
+    
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mylastnight"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.mylastnight.Welcomepage"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.mylastnight.myLog" >
+        </activity>
+        <activity android:name="com.example.mylastnight.drinkcntr" >
+        </activity>
+        <activity android:name="com.example.mylastnight.moments" >
+        </activity>
+        <activity android:name="com.example.mylastnight.settings" >
+        </activity>
+        <activity android:name="com.example.mylastnight.base" >
+        </activity>
+        <activity android:name="com.example.mylastnight.maps" >
+        </activity>
+        <activity android:name="com.example.mylastnight.counting" >
+        </activity>
+    </application>
+
+</manifest>
