@@ -44,7 +44,7 @@ public class Welcomepage extends Activity implements OnClickListener {
 			startActivity(moments);
 		}
 		else if(v.getId()==R.id.settings){
-			Intent settings = new Intent(Welcomepage.this,moments.class);
+			Intent settings = new Intent(Welcomepage.this,settingactivity.class);
 			startActivity(settings);
 		}
 

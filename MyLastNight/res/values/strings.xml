@@ -4,7 +4,7 @@
     <string name="app_name">MyLastNight</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="party">Hey Ready To PARTY</string>
+    <string name="party">Hey Ready To PARTY?</string>
     <string name="mylog">MyLog</string>
     <string name="settings">Settings</string>
     <string name="moments">Moments</string>
@@ -20,5 +20,12 @@
     <string name="ggl">google maps api comes in here with all the other stuff in that api</string>
     <string name="reginit">You have had 0 regular drinks!</string>
     <string name="spclinit">You have had 0 special drinks!</string>
+    <string name="commondrinks">All Time Favorites</string>
+    <string name="privatedrnk">Your Special Combination</string>
+    <string name="menudescr">MyLastNight would take average alcoholic contents for normal serving sizes of drinks </string>
+    <string name="privatedrink">Classics</string>
+    <string name="empty"></string>
+    <string name="emptywithdash">_______</string>
+    <string name="newer">New</string>
 
 </resources>

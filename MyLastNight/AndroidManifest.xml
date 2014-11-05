@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="13"
+        android:minSdkVersion="14"
         android:targetSdkVersion="19" />
 
     <application
@@ -35,6 +35,10 @@
         <activity android:name="com.example.mylastnight.maps" >
         </activity>
         <activity android:name="com.example.mylastnight.counting" >
+        </activity>
+        <activity android:name="com.example.mylastnight.settingactivity" >
+        </activity>
+        <activity android:name="com.example.mylastnight.drinkmenu" >
         </activity>
     </application>
 

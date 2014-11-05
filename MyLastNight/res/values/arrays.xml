@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="genders">
+        <item>male</item>
+        <item>female</item>
+        <item>none</item>
+    </string-array>
+    <string-array name="gendisp">
+        <item>Male</item>
+        <item>Female</item>
+        <item>None</item>
+    </string-array>
+    <string-array name="sysval">
+        <item>american</item>
+        <item>british</item>
+    </string-array>
+    <string-array name="sysdiplay">
+        <item>American(pound,mile)</item>
+        <item>British(KG,KM)</item>
+    </string-array>
+    
+    <string-array name="commonmenudisplay">
+        <item> </item>
+        <item>Amaretto Sour ..,10</item>
+        <item>Jaegar Bomb ..,10</item>
+        <item>Bahama Mama ..,10</item>
+        <item>Bay Breeze ..,10</item>
+        <item>Black Russian ..,10</item>
+        <item>Bloody Mary ..,10</item>
+        <item>Blue Hawaiian ..,10</item>
+        <item>Brave Bull ..,10</item>
+        <item>Cadillac Margarita ..,10</item>
+        <item>Cape Cod ..,10</item>
+        <item>Frozen Margarita ..,10</item>
+        <item>Greyhound ..,10</item>
+        <item>Harvey Wallbanger ..,10</item>
+     </string-array>
+
+    <string-array name="specialmenudisplay">
+        <item> </item>
+        <item>Whiskey ..,10</item>
+        <item>Rum ..,10</item>
+        <item>Red Wine ..,10</item>
+        <item>Absinthe ..,10</item>
+        <item>Tequila ..,10</item>
+        <item>Vodka ..,10</item>
+        <item>Rum ..,10</item>
+        <item>Margarita ..,10</item>
+        <item>Jungle Juice ..,10</item>
+        <item>Super Jungle Juice ..,10</item>
+     </string-array>
+    
+    
+</resources>
