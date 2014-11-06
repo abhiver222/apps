@@ -1,6 +1,7 @@
 package com.example.mylastnight;
 
 import java.util.Arrays;
+import java.util.List;
 
 import android.R.string;
 import android.app.Activity;
@@ -61,6 +62,9 @@ public class drinkmenu extends dataclass implements OnItemSelectedListener {
 		dtsrc = new datasource(this);
 		dtsrc.open();
 		
+		//List<drinkval> drinks = dtsrc.findall();//put where ever data is needed
+		
+		
 		
 	}
 
@@ -95,9 +99,6 @@ public class drinkmenu extends dataclass implements OnItemSelectedListener {
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu){
-		 //MenuInflater inflater = getMenuInflater();
-		 //inflater.inflate(R.menu.topactionbuttons, menu);
-		 //return super.onCreateOptionsMenu(menu);
 		super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.topactionbuttons, menu);
         return true;

@@ -26,5 +26,17 @@
     android:title="Home Location"
     android:summary="MyLastNight will always use you home location for finding your night base"/>
 
+<EditTextPreference android:key="emer1"
+    android:title="Emergency Contact 1"
+    android:summary="This would be an alltime number to which a text would always be sent if you are in anemergency"/>
 
+<EditTextPreference android:key="emer1"
+    android:title="Emergency Contact 2"
+    android:summary="This would be an alltime number to which a text would always be sent if you are in anemergency"/>
+    
+<EditTextPreference android:key="emer1"
+    android:title="Emergency Contact 3"
+    android:summary="This would be an alltime number to which a text would always be sent if you are in anemergency"/>
+    
+    
 </PreferenceScreen>

@@ -72,7 +72,7 @@ public class counting extends Activity {
 			}
 		});		
 	}
-	protected void onResume(){
+	/*protected void onResume(){
 		super.onResume();
 		datasrc.open();
 	}
@@ -80,6 +80,6 @@ public class counting extends Activity {
 	protected void onPause(){
 		super.onPause();
 		datasrc.close();
-	}
+	}*/
 
 }
