@@ -38,6 +38,7 @@ public class Welcomepage extends Activity implements OnClickListener {
 		if(v.getId()==R.id.mylog){
 			Intent log = new Intent(Welcomepage.this,myLog.class);
 			startActivity(log);
+			
 		}
 		else if(v.getId()==R.id.moments){
 			Intent moments = new Intent(Welcomepage.this,moments.class);

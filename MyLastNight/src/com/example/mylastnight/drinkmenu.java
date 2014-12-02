@@ -46,8 +46,7 @@ public class drinkmenu extends dataclass implements OnItemSelectedListener {
 		ArrayAdapter<CharSequence> cname = ArrayAdapter.createFromResource(this,R.array.commonmenudisplay, android.R.layout.simple_spinner_item);
 		ArrayAdapter<CharSequence> spname = ArrayAdapter.createFromResource(this,R.array.specialmenudisplay, android.R.layout.simple_spinner_item);
 		
-		//ArrayAdapter<CharSequence> cname = new ArrayAdapter<CharSequence>(this, android.R.layout.simple_spinner_item,R.array.commonmenudisplay);
-		//ArrayAdapter<CharSequence> spname = new ArrayAdapter<CharSequence>(this, android.R.layout.simple_spinner_item,R.array.specialmenudisplay);
+		
 		
 		//ArrayAdapter<String> cname = new ArrayAdapter<String>(drinkmenu.this,R.array.commonmenudisplay,android.R.layout.simple_spinner_item);
 		//ArrayAdapter<String> spname = new ArrayAdapter<String>(drinkmenu.this, R.array.specialmenudisplay,android.R.layout.simple_spinner_item);
@@ -58,6 +57,7 @@ public class drinkmenu extends dataclass implements OnItemSelectedListener {
 		commonnames.setAdapter(cname);
 		specialnames.setAdapter(spname);
 		
+		commonnames.setOnItemSelectedListener(this);
 		specialnames.setOnItemSelectedListener(this);
 		dtsrc = new datasource(this);
 		dtsrc.open();
@@ -72,23 +72,33 @@ public class drinkmenu extends dataclass implements OnItemSelectedListener {
 	public void onItemSelected(AdapterView<?> spin, View view, int position,
 			long a) {
 		
-		drinkmenu.this.pos = position;
-		drinkmenu.this.name = spin.getItemAtPosition(pos).toString();
-		String name = drinkmenu.this.name; 
-		if(first){
-			names[i]=(drinkmenu.this.name);
+		
+		switch(spin.getId()){
+		case R.id.spinner1:
+			drinkmenu.this.name = spin.getItemAtPosition(position).toString();
+			String name1 = drinkmenu.this.name; 
+			createdata(name);
+		
+		case R.id.spinner2:
+			drinkmenu.this.pos = position;
+			drinkmenu.this.name = spin.getItemAtPosition(pos).toString();
+			String name = drinkmenu.this.name; 
+			if(first){
+				names[i]=(drinkmenu.this.name);
+				createdata(names[i]);
+				display.setText(Arrays.toString(names).replaceAll("\\[", "").replaceAll("\\]", "").replaceAll(",", " "));
+				i++;
+				first = false;
+			}
+			else{
+			names[i]=(drinkmenu.this.name+" + ");
+			createdata(names[i]);
 			display.setText(Arrays.toString(names).replaceAll("\\[", "").replaceAll("\\]", "").replaceAll(",", " "));
 			i++;
-			first = false;
-		}
-		else{
-		names[i]=(drinkmenu.this.name+" + ");
-		display.setText(Arrays.toString(names).replaceAll("\\[", "").replaceAll("\\]", "").replaceAll(",", " "));
-		i++;
-		}
+			}
 		
-		createdata(name);
-		
+		//createdata(name); remove if wanted
+		}//end of switch
 	}
 
 	@Override
@@ -116,7 +126,7 @@ public class drinkmenu extends dataclass implements OnItemSelectedListener {
 	        	
 	            display.setText(Arrays.toString(names).replaceAll("\\[", "").replaceAll("\\]", "").replaceAll(",", " "));
 	            Intent back = new Intent(drinkmenu.this,counting.class);
-	            back.putExtra("values",size);
+	           
 	            startActivity(back);
 	            return true;
 	            
@@ -136,6 +146,9 @@ public class drinkmenu extends dataclass implements OnItemSelectedListener {
 	}
 	
 	private void createdata(String all){
+		if(all.equals(""))
+			return;
+		else{
 		int a = all.indexOf(',');
 		String name = all.substring(0,a);
 		double cont  = Double.parseDouble(all.substring(a+1));
@@ -144,6 +157,8 @@ public class drinkmenu extends dataclass implements OnItemSelectedListener {
 		d1.setalval(cont);
 		Log.i(sqldb1.LOGTAG, "Drink created with id "+ d1.getid());
 		dtsrc.create(d1);
+		
+		}
 	}
 
 }

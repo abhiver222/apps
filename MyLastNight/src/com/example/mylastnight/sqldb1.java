@@ -18,7 +18,7 @@ public class sqldb1 extends SQLiteOpenHelper {
 	public static final String COLUMN_ALCVAL = "alcval";
 	
 	public static final String TABLE_CREATE = 
-				"CREATE_TABLE " + TABLE_DRINK + " ( "+
+				"CREATE TABLE " + TABLE_DRINK + " ( "+
 				COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "+
 				COLUMN_NAME + " TEXT, "+
 				COLUMN_ALCVAL + "  NUMERIC "+
