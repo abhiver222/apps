@@ -15,6 +15,8 @@ import android.os.Environment;
 import android.os.Message;
 import android.os.Messenger;
 import android.util.Log;
+	
+// Example service created .To be ignored. Will be modified to fit the required service for the app.
 
 public class serviceone extends IntentService{
 	

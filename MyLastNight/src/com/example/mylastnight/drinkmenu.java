@@ -1,12 +1,18 @@
 package com.example.mylastnight;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 import android.R.string;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -29,6 +35,7 @@ public class drinkmenu extends dataclass implements OnItemSelectedListener {
 	String[] names = { " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " };
 	boolean first = true;
 	int size = 1;
+	
 
 	datasource dtsrc;
 
@@ -50,15 +57,7 @@ public class drinkmenu extends dataclass implements OnItemSelectedListener {
 				this, R.array.specialmenudisplay,
 				android.R.layout.simple_spinner_item);
 
-		// ArrayAdapter<String> cname = new
-		// ArrayAdapter<String>(drinkmenu.this,R.array.commonmenudisplay,android.R.layout.simple_spinner_item);
-		// ArrayAdapter<String> spname = new
-		// ArrayAdapter<String>(drinkmenu.this,
-		// R.array.specialmenudisplay,android.R.layout.simple_spinner_item);
-
-		// cname.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		// spname.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
+		
 		commonnames.setAdapter(cname);
 		specialnames.setAdapter(spname);
 
@@ -77,11 +76,20 @@ public class drinkmenu extends dataclass implements OnItemSelectedListener {
 	public void onItemSelected(AdapterView<?> spin, View view, int position,
 			long a) {
 
+		SharedPreferences pref = getApplicationContext().getSharedPreferences("prefs", 0);
+		Editor edt = pref.edit();
 		switch (spin.getId()) {
 		case R.id.spinner1:
 			drinkmenu.this.name = spin.getItemAtPosition(position).toString();
 			String name1 = drinkmenu.this.name;
-			createdata(name);
+			if(name1.equals("")||name1==null)break;;
+			int index1 = name1.indexOf(' ');
+			int index2 = name1.indexOf(',');
+			String drinkname = name.substring(0,index1);
+			String ret = name1.substring(0,index1) + "," +name1.substring(index2);
+			edt.putString(drinkname, ret);
+			//createdrink(name1);
+			//createdata(name);
 
 		case R.id.spinner2:
 			drinkmenu.this.pos = position;
@@ -101,9 +109,24 @@ public class drinkmenu extends dataclass implements OnItemSelectedListener {
 						.replaceAll("\\]", "").replaceAll(",", " "));
 				i++;
 			}
-
+			if(name.equals("")||name==null)break;;
+			int index11 = name.indexOf(' ');
+			int index22 = name.indexOf(',');
+			String drinkname1 = name.substring(0,index11);
+			String ret1 = name.substring(0,index11) + "," +name.substring(index22);
+			edt.putString(drinkname1, ret1);
+			edt.commit();
 			// createdata(name); remove if wanted
 		}// end of switch
+	}
+
+	private static void createdrink(String name1) {
+		// TODO Auto-generated method stub
+		if(name1.equals("")||name1==null)return;
+		int index1 = name1.indexOf(' ');
+		int index2 = name1.indexOf(',');
+		String ret = name1.substring(0,index1) + "," +name1.substring(index2);
+		
 	}
 
 	@Override
@@ -129,8 +152,27 @@ public class drinkmenu extends dataclass implements OnItemSelectedListener {
 
 			display.setText(Arrays.toString(names).replaceAll("\\[", "")
 					.replaceAll("\\]", "").replaceAll(",", " "));
+			
+			
+			
+			
+			/*ArrayList<drinkval> drinks =  (ArrayList<drinkval>) dtsrc.findall();//put where ever data is
+			String[] arr = new String[drinks.size()];
+			Iterator<drinkval> it = drinks.iterator();
+			int i=0;
+			while(it.hasNext()){
+				drinkval d = it.next();
+				arr[i] = d.getname()+ " " + d.getalval();
+				i++;
+			}*/
 			Intent back = new Intent(drinkmenu.this, counting.class);
-
+			/*Log.i("gotem", "Got the drinks now the intent");
+			//Bundle bund = new Bundle();
+			//bund.putSerializable("bund",drinks);
+			Log.i("gotembund", "Got the bundle");
+			//back.putExtra("list",bund);
+			Log.i("gotem", "put extra");
+			back.putExtra("vals",arr);*/
 			startActivity(back);
 			return true;
 
@@ -150,7 +192,7 @@ public class drinkmenu extends dataclass implements OnItemSelectedListener {
 	}
 
 	private void createdata(String all) {
-		if (all.equals(""))
+		if (all.equals("")||all==null)
 			return;
 		else {
 			int a = all.indexOf(',');
@@ -162,8 +204,8 @@ public class drinkmenu extends dataclass implements OnItemSelectedListener {
 			d1.setname(name);
 			d1.setalval(cont);
 			Log.i(sqldb1.LOGTAG, "Drink created with id " + d1.getid());
-			dtsrc.create(d1);
-
+			d1 = dtsrc.create(d1);
+			Log.i("any","Drink created with id"+d1.getid());
 		}
 	}
 

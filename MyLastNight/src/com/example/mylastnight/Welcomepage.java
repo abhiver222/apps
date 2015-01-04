@@ -3,6 +3,8 @@ package com.example.mylastnight;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,6 +17,7 @@ public class Welcomepage extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_welcomepage);
 		
+		//Setting up the three main navigation buttons
 		Button mylog = (Button) findViewById(R.id.mylog);
 		Button moments = (Button) findViewById(R.id.moments);
 		Button settings = (Button) findViewById(R.id.settings);
@@ -50,6 +53,26 @@ public class Welcomepage extends Activity implements OnClickListener {
 		}
 
 		
+	}
+	
+	// Trying to delete the shared preferences if the application ends
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		SharedPreferences prefs = getApplicationContext().getSharedPreferences("prefs", 0);
+		Editor edt = prefs.edit();
+		edt.clear();
+		edt.commit();
+	}
+	
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		SharedPreferences prefs = getApplicationContext().getSharedPreferences("prefs", 0);
+		Editor edt = prefs.edit();
+		edt.commit();
 	}
 
 }

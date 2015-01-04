@@ -1,41 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="159dp"
-        android:scrollbarSize="10dp"
-        android:layout_marginLeft="15dp" 
-        android:drawSelectorOnTop="true"       
-         />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spinner1"
-        android:layout_centerHorizontal="true"
-        android:drawSelectorOnTop="true"
-        android:layout_marginTop="78dp"
-        android:scrollbarSize="10dp"
-        android:animateLayoutChanges="true"
-         />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/menudescr"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+    android:layout_height="match_parent"
+    android:background="@drawable/mydrinks" >
 
     <TextView
         android:id="@+id/textView2"
@@ -43,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="120dp"
         android:text="@string/commondrinks"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -53,16 +20,37 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/spinner1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="56dp"
         android:text="@string/privatedrink"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="40dp"
+        android:animateLayoutChanges="true"
+        android:drawSelectorOnTop="true"
+        android:scrollbarSize="10dp" />
 
     <TextView
         android:id="@+id/selected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/spinner2"
+        android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
         android:text="@string/emptywithdash" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2"
+        android:drawSelectorOnTop="true"
+        android:scrollbarSize="10dp" />
 
 </RelativeLayout>

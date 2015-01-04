@@ -1,5 +1,7 @@
 package com.example.mylastnight;
 
+//Class handling the database. Creates new drink object, adds attributes and adds to database.
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,6 +64,7 @@ public class datasource {
 				drinks.add(drink);
 			}
 		}
+		cursor.close();
 		return drinks;
 	}
 }

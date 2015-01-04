@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" 
-    android:background="@drawable/acl2">
+    android:background="@drawable/mydrinks">
 
     <TextView
         android:id="@+id/regdescription"
@@ -16,17 +16,6 @@
         android:textColor="#000000"/>
 
     <TextView
-        android:id="@+id/spcldescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/regdescription"
-        android:layout_below="@+id/specialbutton"
-        android:layout_marginTop="15dp"
-        android:text="@string/spcldescr"
-        android:textAppearance="?android:attr/textAppearanceMedium" 
-        android:textColor="#000000"/>
-
-    <TextView
         android:id="@+id/specialdrinkview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,6 +24,7 @@
         android:layout_marginTop="31dp"
         android:text="@string/spclinit"
         android:textColor="#000000"
+        android:textStyle="italic"
         android:textSize="30px" />
 
     <Button
@@ -45,19 +35,10 @@
         android:layout_below="@+id/specialdrinkview"
         android:layout_marginTop="17dp"
         android:text="@string/special" 
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
         android:textColor="#000000"
-        android:background="#39BDBF"/>
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/drinktype"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#ff0000" />
+        android:background="@drawable/button2"/>
 
     <Button
         android:id="@+id/regularbutton"
@@ -66,9 +47,11 @@
         android:layout_above="@+id/regdescription"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="14dp"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
         android:text="@string/regular"
         android:textColor="#000000"
-        android:background="#39BDBF" />
+        android:background="@drawable/button2" />
 
     <TextView
         android:id="@+id/regulardrinkview"
@@ -77,6 +60,8 @@
         android:layout_above="@+id/regularbutton"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="25dp"
+        android:fontFamily="arial"
+        android:textStyle="italic"
         android:text="@string/reginit"
         android:textColor="#000000" 
         android:textSize="30px"/>

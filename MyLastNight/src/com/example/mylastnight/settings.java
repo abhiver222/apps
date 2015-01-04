@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 public class settings extends PreferenceFragment{
 
-	
+	// Creates the settings template and storing them in a shared preference. Pulling preferences from settingspref.xml
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.settingprefs);

@@ -31,30 +31,40 @@ public final class R {
     public static final class drawable {
         public static final int acl2=0x7f020000;
         public static final int alcoholdrink=0x7f020001;
-        public static final int beer=0x7f020002;
-        public static final int ic_action_new=0x7f020003;
-        public static final int ic_launcher=0x7f020004;
+        public static final int background2=0x7f020002;
+        public static final int beer=0x7f020003;
+        public static final int beer4=0x7f020004;
+        public static final int button=0x7f020005;
+        public static final int button2=0x7f020006;
+        public static final int ic_action_new=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int loading=0x7f020009;
+        public static final int mydrinks=0x7f02000a;
+        public static final int mylog=0x7f02000b;
+        public static final int start=0x7f02000c;
+        public static final int start2=0x7f02000d;
+        public static final int welcome=0x7f02000e;
     }
     public static final class id {
         public static final int action_settings=0x7f0a0012;
-        public static final int base=0x7f0a0010;
-        public static final int counter=0x7f0a000f;
-        public static final int maps=0x7f0a0011;
+        public static final int base=0x7f0a000f;
+        public static final int bottle=0x7f0a0011;
+        public static final int counter=0x7f0a000e;
+        public static final int maps=0x7f0a0010;
         public static final int moments=0x7f0a0002;
-        public static final int mylog=0x7f0a0001;
+        public static final int mylog=0x7f0a0000;
         public static final int regdescription=0x7f0a0004;
-        public static final int regularbutton=0x7f0a0009;
-        public static final int regulardrinkview=0x7f0a0008;
-        public static final int selected=0x7f0a000e;
+        public static final int regularbutton=0x7f0a0008;
+        public static final int regulardrinkview=0x7f0a0006;
+        public static final int selected=0x7f0a000d;
         public static final int settings=0x7f0a0003;
-        public static final int spcldescription=0x7f0a0005;
-        public static final int specialbutton=0x7f0a0006;
-        public static final int specialdrinkview=0x7f0a0007;
-        public static final int spinner1=0x7f0a000a;
-        public static final int spinner2=0x7f0a000b;
-        public static final int textView1=0x7f0a0000;
-        public static final int textView2=0x7f0a000c;
-        public static final int textView3=0x7f0a000d;
+        public static final int specialbutton=0x7f0a0007;
+        public static final int specialdrinkview=0x7f0a0005;
+        public static final int spinner1=0x7f0a000b;
+        public static final int spinner2=0x7f0a000c;
+        public static final int textView1=0x7f0a0001;
+        public static final int textView2=0x7f0a0009;
+        public static final int textView3=0x7f0a000a;
     }
     public static final class layout {
         public static final int activity_welcomepage=0x7f030000;
@@ -64,6 +74,7 @@ public final class R {
         public static final int maps=0x7f030004;
         public static final int moments=0x7f030005;
         public static final int mylog=0x7f030006;
+        public static final int starting=0x7f030007;
     }
     public static final class menu {
         public static final int topactionbuttons=0x7f090000;

@@ -1,5 +1,7 @@
 package com.example.mylastnight;
 
+//Creating a drink object for each drink
+
 public class drinkval {
 	private long id;
 	private String name;

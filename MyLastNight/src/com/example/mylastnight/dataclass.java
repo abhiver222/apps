@@ -1,7 +1,5 @@
 package com.example.mylastnight;
 
-
-
 import android.app.Activity;
 import android.os.Bundle;
 

@@ -2,6 +2,8 @@ package com.example.mylastnight;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -9,11 +11,13 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
+// This class is for Creating the myLog menu from where you can switch to different parts of the application
+
 public class myLog extends Activity implements OnClickListener{
 
 	/**
 	 * @param args
-	 */
+	**/
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.mylog);
@@ -40,6 +44,9 @@ public class myLog extends Activity implements OnClickListener{
 		drinkcounter.setOnClickListener(this);
 		base.setOnClickListener(this);
 		maps.setOnClickListener(this);
+		SharedPreferences prefs = getApplicationContext().getSharedPreferences("prefs", 0);
+		Editor edt = prefs.edit();
+		edt.putString("water", "water");
 
 }
 
@@ -48,6 +55,10 @@ public class myLog extends Activity implements OnClickListener{
 		// TODO Auto-generated method stub
 		if(v.getId()==R.id.counter){
 			Intent count = new Intent(myLog.this,counting.class);
+			Intent serv= new Intent(myLog.this, serviceone.class);
+			//String[] arr = new String[0];
+			//count.putExtra("vals", arr);
+			startService(serv);
 			startActivity(count);
 		}
 		else if(v.getId()==R.id.base){

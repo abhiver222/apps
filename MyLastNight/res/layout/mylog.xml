@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent" 
+    android:background="@drawable/mylog" >
 
     <Button
         android:id="@+id/counter"
@@ -9,7 +10,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="71dp"
+        android:layout_marginTop="100dp"
+        android:textStyle="bold"
+        android:background="@drawable/button2"
+        android:fontFamily="arial"
+        android:paddingRight="50dp"
+        android:paddingLeft="50dp"
         android:text="@string/drnkcontr" />
 
     <Button
@@ -18,6 +24,12 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:textStyle="bold"
+        android:paddingRight="75dp"
+        android:paddingLeft="75dp"
+        android:background="@drawable/button2"
+        android:fontFamily="arial"
+        android:layout_marginTop="40dp"
         android:text="@string/setbase" />
 
     <Button
@@ -25,8 +37,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:fontFamily="arial"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="76dp"
+        android:paddingRight="87dp"
+        android:paddingLeft="87dp"
+        android:textStyle="bold"
+        android:background="@drawable/button2"
+        android:layout_marginBottom="100dp"
         android:text="@string/maps" />
 
 </RelativeLayout>
