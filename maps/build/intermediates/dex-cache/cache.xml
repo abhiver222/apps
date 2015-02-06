@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="C:\Users\benja_000\workspace2\google\google_play_services\MyLastNight\app\build\intermediates\pre-dexed\debug\classes-fef59d04f1a8f11dc0497a0120f45528fb853997.jar"
+        jar="C:\Users\benja_000\workspace2\google\google_play_services\MyLastNight\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.1.11\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="0f700f6802ba1a1f1fa7ac26d5db0666a89d75a6"/>
+    <item
+        dex="C:\Users\benja_000\workspace2\google\google_play_services\MyLastNight\app\build\intermediates\pre-dexed\debug\support-annotations-20.0.0-b02cec56e7c72ac38c3ebc74a79c083d4cbc960f.jar"
+        jar="C:\Users\benja_000\Desktop\Android Studio\AndroidStudio\sdk\extras\android\m2repository\com\android\support\support-annotations\20.0.0\support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
+    <item
+        dex="C:\Users\benja_000\workspace2\google\google_play_services\MyLastNight\app\build\intermediates\pre-dexed\debug\internal_impl-20.0.0-bafe8fb207d13a688f1d245f58a211dabd430883.jar"
+        jar="C:\Users\benja_000\workspace2\google\google_play_services\MyLastNight\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\libs\internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+    <item
+        dex="C:\Users\benja_000\workspace2\google\google_play_services\MyLastNight\app\build\intermediates\pre-dexed\debug\classes-22ccc03667de7db90361723f0036648d3cbbdb07.jar"
+        jar="C:\Users\benja_000\workspace2\google\google_play_services\MyLastNight\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
+    <item
+        dex="C:\Users\benja_000\workspace2\google\google_play_services\MyLastNight\app\build\intermediates\pre-dexed\debug\classes-0710aadbd950777c6b93b61e6a482c629d776e08.jar"
+        jar="C:\Users\benja_000\workspace2\google\google_play_services\MyLastNight\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\20.0.0\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef"/>
+
+</pre-dex-items>

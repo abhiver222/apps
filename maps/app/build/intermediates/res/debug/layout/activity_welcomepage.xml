@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/beer"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Welcomepage" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/party"
+        android:textColor="#FF4000"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/turnup"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/turnup"
+        android:textColorHighlight="#00FF00"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/settings"
+        android:layout_alignEnd="@+id/settings" />
+
+    <Button
+        android:id="@+id/mylog"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mylog"
+        android:textColorHighlight="#00FF00"
+        android:singleLine="false"
+        android:layout_above="@+id/settings"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/settings"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:textColorHighlight="#00FF00"
+        android:layout_above="@+id/turnup"
+        android:layout_alignRight="@+id/mylog"
+        android:layout_alignEnd="@+id/mylog" />
+
+</RelativeLayout><!-- From: file:/C:/Users/benja_000/workspace2/google/google_play_services/MyLastNight/app/src/main/res/layout/activity_welcomepage.xml -->

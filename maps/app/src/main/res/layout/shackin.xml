@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical"
+    android:id="@+id/shackin">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/shackinwarning"
+        android:id="@+id/shackinwarning"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center_horizontal|fill_vertical"
+        android:layout_weight="0.50"
+        android:layout_gravity="top" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shack"
+        android:id="@+id/shack"
+        android:clickable="true"
+        android:layout_weight="0.50"
+        android:layout_gravity="bottom" />
+</LinearLayout>

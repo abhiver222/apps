@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+<CheckBoxPreference android:key="loctrack"
+    android:title="Location Tracking"
+    android:summaryOff="This would track your position continuously to keep track of wehre you go and also help you find a way home"
+    android:summaryOn="Hmm, you would be safer now!"/>
+    
+<EditTextPreference android:key="weight"
+    android:title="Weight"
+    android:summary="This would help us calculate your blood alcohol level"/>
+
+<ListPreference android:key="gender"
+    android:entries="@array/gendisp"
+    android:entryValues="@array/genders"
+    android:title="Gender"
+    android:summary="This would help MyLastNight calculate your blood alcohol level"/>
+
+<ListPreference android:key="system"
+    android:entries="@array/sysdiplay"
+    android:entryValues="@array/sysval"
+    android:title="Unit System"
+    android:summary="MyLastNight would present all the data in this system"/>
+
+
+<CheckBoxPreference android:key="home"
+    android:title="Home Location"
+    android:summary="MyLastNight will always use you home location for finding your night base"/>
+
+<EditTextPreference android:key="emer1"
+    android:title="Emergency Contact 1"
+    android:summary="This would be an alltime number to which a text would always be sent if you are in anemergency"/>
+
+<EditTextPreference android:key="emer1"
+    android:title="Emergency Contact 2"
+    android:summary="This would be an alltime number to which a text would always be sent if you are in anemergency"/>
+    
+<EditTextPreference android:key="emer1"
+    android:title="Emergency Contact 3"
+    android:summary="This would be an alltime number to which a text would always be sent if you are in anemergency"/>
+    
+    
+</PreferenceScreen>
